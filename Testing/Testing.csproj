@@ -8,10 +8,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Case01-input.html" />
+    <None Remove="Resources\Case02-input.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Case01-input.html" />
+    <EmbeddedResource Include="Resources\Case02-input.html" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.7" />
     <PackageReference Include="MSTest.TestFramework" Version="2.2.7" />
-    <PackageReference Include="coverlet.collector" Version="3.1.0" />
+    <PackageReference Include="coverlet.collector" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="QuestPDF" Version="2022.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuestPdfUtil\QuestPdfUtil.csproj" />
   </ItemGroup>
 
 </Project>
