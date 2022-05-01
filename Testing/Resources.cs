@@ -11,5 +11,13 @@ namespace Testing
             throw new Exception($"Resource not found {name}");
 
         internal static string GetString(string name) => new StreamReader(GetResource(name)).ReadToEnd();
+
+        internal static byte[] GetBytes(string name)
+        {
+            var stream = GetResource(name);
+            using var output = new MemoryStream();
+            stream.CopyTo(output);
+            return output.ToArray();
+        }
     }
 }
