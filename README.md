@@ -13,6 +13,8 @@ See this in use in my [test method](https://github.com/adamfoneil/QuestPdfUtil/b
 - void [Html](https://github.com/adamfoneil/QuestPdfUtil/blob/master/QuestPdfUtil/QuestPdfHelper.cs#L10)
  (this IContainer container, XDocument document)
 - void [Html](https://github.com/adamfoneil/QuestPdfUtil/blob/master/QuestPdfUtil/QuestPdfHelper.cs#L13)
+ (this IContainer container, string html, [ Dictionary<string, string> replacements ])
+- void [Html](https://github.com/adamfoneil/QuestPdfUtil/blob/master/QuestPdfUtil/QuestPdfHelper.cs#L19)
  (this IContainer container, XElement element)
 
 ## QuestPdfUtil.XmlHelper [XmlHelper.cs](https://github.com/adamfoneil/QuestPdfUtil/blob/master/QuestPdfUtil/XmlHelper.cs#L5)
