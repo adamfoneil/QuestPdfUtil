@@ -10,6 +10,12 @@ namespace QuestPdfUtil
         public static void Html(this IContainer container, XDocument document) =>
             Html(container, document?.Root ?? throw new Exception("Document may not be null"));
 
+        public static void Html(this IContainer container, string html, Dictionary<string, string> replacements = null)
+        {
+            var doc = XmlHelper.ToDocument(html, replacements: replacements);
+            Html(container, doc);
+        }
+
         public static void Html(this IContainer container, XElement element)
         {
             container.Column(col =>
