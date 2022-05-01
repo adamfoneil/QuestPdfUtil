@@ -7,16 +7,16 @@ namespace QuestPdfUtil
 {
     public static class QuestPdfHelper
     {
-        public static void Html(this IContainer container, XDocument document) =>
-            Html(container, document?.Root ?? throw new Exception("Document may not be null"));
+        public static void Html(this IContainer container, XDocument document, Action<TextSpanDescriptor> spanAction = null) =>
+            Html(container, document?.Root ?? throw new Exception("Document may not be null"), spanAction);
 
-        public static void Html(this IContainer container, string html, Dictionary<string, string> replacements = null)
+        public static void Html(this IContainer container, string html, Dictionary<string, string> replacements = null, Action<TextSpanDescriptor> spanAction = null)
         {
             var doc = XmlHelper.ToDocument(html, replacements: replacements);
-            Html(container, doc);
+            Html(container, doc, spanAction);
         }
 
-        public static void Html(this IContainer container, XElement element)
+        public static void Html(this IContainer container, XElement element, Action<TextSpanDescriptor> spanAction = null)
         {
             container.Column(col =>
             {
@@ -29,7 +29,7 @@ namespace QuestPdfUtil
                             break;
 
                         case "div":
-                            RenderText(col.Item(), child);
+                            RenderText(col.Item(), child, spanAction: spanAction);
                             break;
                     }
                 }

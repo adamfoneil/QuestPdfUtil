@@ -8,7 +8,7 @@
     <Authors>Adam O'Neil</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Copyright>Copyright (c) 2022 Adam O'Neil</Copyright>
     <PackageProjectUrl>https://github.com/adamfoneil/QuestPdfUtil</PackageProjectUrl>
     <RepositoryUrl>https://github.com/adamfoneil/QuestPdfUtil</RepositoryUrl>
