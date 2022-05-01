@@ -7,6 +7,13 @@
     <PackageId>AO.QuestPDF.Util</PackageId>
     <Authors>Adam O'Neil</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Copyright>Copyright (c) 2022 Adam O'Neil</Copyright>
+    <PackageProjectUrl>https://github.com/adamfoneil/QuestPdfUtil</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/adamfoneil/QuestPdfUtil</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>pdf; questpdf; html-conversion</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
