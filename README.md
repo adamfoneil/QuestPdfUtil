@@ -11,11 +11,11 @@ See this in use in my [test method](https://github.com/adamfoneil/QuestPdfUtil/b
 
 ## QuestPdfUtil.QuestPdfHelper [QuestPdfHelper.cs](https://github.com/adamfoneil/QuestPdfUtil/blob/master/QuestPdfUtil/QuestPdfHelper.cs#L8)
 - void [Html](https://github.com/adamfoneil/QuestPdfUtil/blob/master/QuestPdfUtil/QuestPdfHelper.cs#L10)
- (this IContainer container, XDocument document)
+ (this IContainer container, XDocument document, [ Action<TextSpanDescriptor> spanAction ])
 - void [Html](https://github.com/adamfoneil/QuestPdfUtil/blob/master/QuestPdfUtil/QuestPdfHelper.cs#L13)
- (this IContainer container, string html, [ Dictionary<string, string> replacements ])
+ (this IContainer container, string html, [ Dictionary<string, string> replacements ], [ Action<TextSpanDescriptor> spanAction ])
 - void [Html](https://github.com/adamfoneil/QuestPdfUtil/blob/master/QuestPdfUtil/QuestPdfHelper.cs#L19)
- (this IContainer container, XElement element)
+ (this IContainer container, XElement element, [ Action<TextSpanDescriptor> spanAction ])
 
 ## QuestPdfUtil.XmlHelper [XmlHelper.cs](https://github.com/adamfoneil/QuestPdfUtil/blob/master/QuestPdfUtil/XmlHelper.cs#L5)
 - XDocument [ToDocument](https://github.com/adamfoneil/QuestPdfUtil/blob/master/QuestPdfUtil/XmlHelper.cs#L7)
