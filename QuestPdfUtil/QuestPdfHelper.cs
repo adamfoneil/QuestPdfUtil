@@ -27,8 +27,7 @@ namespace QuestPdfUtil
                             break;
                     }
                 }
-            });
-            
+            });            
         }
         
         private static void RenderText(IContainer container, XElement element, Action<TextDescriptor> textAction = null, Action<TextSpanDescriptor> spanAction = null)
@@ -81,9 +80,9 @@ namespace QuestPdfUtil
             var styles = inner.Attribute("style")?.Value.ToString();
             if (styles is null) return;
             
-            var styleDictionary = styles.Split(";").Select(item =>
+            var styleDictionary = styles.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries).Select(item =>
             {
-                var parts = item.Split(":"); return new
+                var parts = item.Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries); return new
                 {
                     Key = parts[0].Trim(),
                     Value = parts[1].Trim()

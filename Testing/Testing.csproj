@@ -11,12 +11,14 @@
     <None Remove="Resources\Case01-input.html" />
     <None Remove="Resources\Case01-output.pdf" />
     <None Remove="Resources\Case02-input.html" />
+    <None Remove="Resources\Case03-input.html" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\Case01-input.html" />
     <EmbeddedResource Include="Resources\Case01-output.pdf" />
     <EmbeddedResource Include="Resources\Case02-input.html" />
+    <EmbeddedResource Include="Resources\Case03-input.html" />
   </ItemGroup>
 
   <ItemGroup>
